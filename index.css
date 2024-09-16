@@ -58,15 +58,36 @@ section{
     height : 20px;
     border : black 2px solid;
     margin : 4px;
+    font-size: 20px;
 }
 
-.image{
+#image1{
     height : 300px;
     border : black 2px solid;
     margin : 4px;
     width : 100%;
     margin-bottom: 0;
-    background-image: url(miniproj/images/nexon.jpg);
+    background-image: url(/images/nexon.jpg);
+    background-size: cover;
+}
+
+#image2{
+    height : 300px;
+    border : black 2px solid;
+    margin : 4px;
+    width : 100%;
+    margin-bottom: 0;
+    background-image: url(/images/rols_royce.jpg);
+    background-size: cover;
+}
+
+#image3{
+    height : 300px;
+    border : black 2px solid;
+    margin : 4px;
+    width : 100%;
+    margin-bottom: 0;
+    background-image: url(/images/Tesla.jpg);
     background-size: cover;
 }
 
@@ -92,4 +113,6 @@ button{
     height : 40px;
     width : 150px;
     border-radius: 5px;
+    background-color: red;
+    color: white;
 }
