@@ -1,5 +1,5 @@
 header{
-    border : red 2px solid;
+    /* border : red 2px solid; */
     height : 25%;
     display : flex;
     flex-direction: column;
@@ -8,7 +8,7 @@ header{
 }
 
 .heading{
-    border : black 2px solid;
+    /* border : black 2px solid; */
     height : 70%;
     text-align: center;
     font-size: 80px;
@@ -20,7 +20,7 @@ header{
 }
 
 .caption{
-    border : black 2px solid;   
+    /* border : black 2px solid;    */
     height : 30%;
     text-align: center;
     margin : 0;
@@ -28,8 +28,10 @@ header{
 }
 
 body{
-    border : black 2px solid;
+    /* border : black 2px solid; */
     height : 100vh;
+    background-color: rgb(46, 46, 46);
+    color : white;
 }
 
 section{
@@ -39,7 +41,7 @@ section{
     align-items: center;
     /* align-content: space-evenly; */
     height : 75%;
-    border : black 2px solid;
+    /* border : black 2px solid; */
     padding : 0;
 }
 
@@ -52,19 +54,27 @@ section{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    transition: all 0.1s steps(50) ;
+}
+
+.card:hover{
+    transform : scale(1.03);
 }
 
 .carname{
-    height : 20px;
-    border : black 2px solid;
-    margin : 4px;
+    height : 50px;
+    width : 100%;
+    background-color: gray;
+    text-align: center;
+    /* border : black 2px solid; */
+    /* margin : 4px; */
     font-size: 20px;
 }
 
 #image1{
     height : 300px;
-    border : black 2px solid;
-    margin : 4px;
+    /* border : black 2px solid; */
+    /* margin : 4px; */
     width : 100%;
     margin-bottom: 0;
     background-image: url(/images/nexon.jpg);
@@ -73,8 +83,8 @@ section{
 
 #image2{
     height : 300px;
-    border : black 2px solid;
-    margin : 4px;
+    /* border : black 2px solid; */
+    /* margin : 4px; */
     width : 100%;
     margin-bottom: 0;
     background-image: url(/images/rols_royce.jpg);
@@ -83,8 +93,8 @@ section{
 
 #image3{
     height : 300px;
-    border : black 2px solid;
-    margin : 4px;
+    /* border : black 2px solid; */
+    /* margin : 4px; */
     width : 100%;
     margin-bottom: 0;
     background-image: url(/images/Tesla.jpg);
@@ -93,14 +103,33 @@ section{
 
 .feature{
     height : 300px;
-    border : black 2px solid;
-    margin : 4px;
+    /* border : black 2px solid; */
+    /* margin : 4px; */
     margin-top: 0;
     width : 100%;
+    background-color: white;
+    color: black;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+#price{
+    margin : 5px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+#ftrs{
+    margin : 0;
 }
 
 .but{
     height : 100px;
+    width : 100%;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -115,4 +144,51 @@ button{
     border-radius: 5px;
     background-color: red;
     color: white;
+    transition-property : all;
+    transition-duration : 0.1s;
+    transition-timing-function : steps(50);
+    animation-name : jump ;
+    animation-duration : 0.5s;
+    animation-timing-function: steps(50);
+    animation-delay: 0s;;
+    animation-iteration-count: 10;
+}
+
+button:hover{
+    /* height : 40px;
+    width : 150px;
+    border-radius: 5px;
+    background-color: red;
+    color: white; */
+    transform : scale(1.1);
+}
+
+button:active{
+    /* height : 40px;
+    width : 150px;
+    border-radius: 5px;
+    background-color: red;
+    color: white; */
+    background-color: rgb(17, 240, 17);
+    transform : scale(1.11);
+}
+
+@keyframes jump{
+    0%{
+        /* background-color: green; */
+        transform : translate(0px);
+    }
+    25%{
+        transform : translate(-10px);
+    }
+    50%{
+        transform : translate(0px);
+        /* background-color: pink; */
+    }
+    75%{
+        transform : translate(10px);
+    }
+    100%{
+        transform : translate(0px)
+    }
 }
